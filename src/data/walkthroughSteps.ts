@@ -46,7 +46,7 @@ export const walkthroughSteps: WalkthroughStep[] = [
     placement: "right",
     beforeNext: async () => {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 0));
       alert("Form submitted successfully! (This was just a demo)");
     },
   },

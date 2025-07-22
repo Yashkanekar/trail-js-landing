@@ -1,69 +1,24 @@
-# React + TypeScript + Vite
+# 🧭 trail-js Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive landing page for the [trail-js](https://github.com/Yashkanekar/trail-js) React walkthrough library. Built with React, TypeScript, and Vite, featuring a live interactive demo that showcases all the powerful features of trail-js.
 
-Currently, two official plugins are available:
+![trail-js Demo](https://img.shields.io/badge/Demo-Live-brightgreen) ![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+**[View Live Site →](https://trail-js.onrender.com/)**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Experience the interactive walkthrough demo directly on the landing page!
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Interactive Demo**: Experience trail-js functionality firsthand
+- **Real-time Code Display**: View step configurations while walking through the demo
+- **Responsive Design**: Optimized for all device sizes
+- **Modern UI**: Clean, professional design with smooth animations
+- **Code Examples**: Multiple usage patterns and implementation examples
+- **Feature Showcase**: Comprehensive overview of trail-js capabilities
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📚 Related Links
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **trail-js Library**: [GitHub](https://github.com/Yashkanekar/trail-js) | [npm](https://www.npmjs.com/package/trail-js)
