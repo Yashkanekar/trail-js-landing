@@ -1,0 +1,82 @@
+/* Custom walkthrough styles */
+.walkthrough-tooltip {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 400px;
+  border: 1px solid rgba(229, 231, 235, 1);
+}
+
+.walkthrough-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.walkthrough-tooltip h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.walkthrough-tooltip p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.walkthrough-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.walkthrough-nav-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.walkthrough-nav-buttons .btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.walkthrough-nav-buttons .btn-primary:hover {
+  background: #2563eb;
+}
+
+.walkthrough-nav-buttons .btn-secondary {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.walkthrough-nav-buttons .btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .walkthrough-tooltip {
+    max-width: 300px;
+    padding: 1rem;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code block syntax highlighting */
+.language-javascript,
+.language-typescript,
+.language-bash {
+  font-family: "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
+}
