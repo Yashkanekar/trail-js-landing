@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import CodeBlock from "./CodeBlock";
 import { walkthroughSteps } from "../data/walkthroughSteps";
-import { stepCodeExamples } from "../data/stepCodeExamples";
+import { stepCodeExamples } from "../data/stepCodeExamples"; // Make sure you have this import
 
 const LandingPage: React.FC = () => {
   const { isActive, goToStep, currentStepIndex } = useWalkthrough();
@@ -45,9 +45,9 @@ const LandingPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 overflow-x-hidden">
       {/* Header */}
-      <header className="container mx-auto px-6 py-8">
+      <header className="container mx-auto px-4 sm:px-6 py-8">
         <nav className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
@@ -75,21 +75,24 @@ const LandingPage: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-16 text-center" id="hero">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          React Walkthrough Library
+      <section
+        className="container mx-auto px-4 sm:px-6 py-16 text-center"
+        id="hero"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          trail-js | A React walkthrough library
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           A lightweight, highly-customizable, and feature-rich walkthrough
           library for React apps. Guide users through product features with
           interactive steps and tooltips.
         </p>
 
-        <div className="flex justify-center space-x-4 mb-12">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
           <button
             id="start-demo-btn"
             onClick={startDemo}
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 w-full sm:w-auto"
           >
             <Play className="w-5 h-5" />
             <span>Try Interactive Demo</span>
@@ -98,7 +101,7 @@ const LandingPage: React.FC = () => {
 
         {/* Installation */}
         <div
-          className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto"
+          className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-2xl mx-auto"
           id="installation-section"
         >
           <CodeBlock
@@ -110,7 +113,10 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-6 py-16" id="features-section">
+      <section
+        className="container mx-auto px-4 sm:px-6 py-16"
+        id="features-section"
+      >
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Powerful Features
         </h2>
@@ -131,14 +137,14 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Demo Section */}
-      <section className="container mx-auto px-6 py-16">
-        <div className="bg-white rounded-lg shadow-xl p-8">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
+        <div className="bg-white rounded-lg shadow-xl p-4 sm:p-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
             See It In Action
           </h2>
 
-          {/* Interactive Demo Area */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          {/* Interactive Demo Area - NOW RESPONSIVE */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Demo UI */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-900">
@@ -146,8 +152,11 @@ const LandingPage: React.FC = () => {
               </h3>
 
               <div className="bg-gray-50 p-6 rounded-lg space-y-4">
-                <div className="flex items-center space-x-4">
-                  <label className="text-sm font-medium text-gray-700">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+                  <label
+                    htmlFor="name-input"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Name:
                   </label>
                   <input
@@ -158,8 +167,11 @@ const LandingPage: React.FC = () => {
                   />
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <label className="text-sm font-medium text-gray-700">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+                  <label
+                    htmlFor="email-input"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Email:
                   </label>
                   <input
@@ -202,7 +214,7 @@ const LandingPage: React.FC = () => {
                 )}
               </div>
 
-              <div className="bg-gray-900 rounded-lg p-4 text-sm">
+              <div className="bg-gray-900 rounded-lg text-sm">
                 <CodeBlock
                   language="javascript"
                   code={
@@ -223,7 +235,10 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Usage Examples */}
-      <section className="container mx-auto px-6 py-16" id="usage-examples">
+      <section
+        className="container mx-auto px-4 sm:px-6 py-16"
+        id="usage-examples"
+      >
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Usage Examples
         </h2>
@@ -232,13 +247,13 @@ const LandingPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             {/* Tab Navigation */}
             <div className="border-b border-gray-200">
-              <nav className="flex space-x-8 px-6">
+              <nav className="flex space-x-1 sm:space-x-8 px-2 sm:px-6 overflow-x-auto">
                 {["installation", "basic", "validation", "custom"].map(
                   (tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`py-4 px-1 border-b-2 font-medium text-sm capitalize transition-colors ${
+                      className={`py-4 px-2 sm:px-1 border-b-2 font-medium text-sm capitalize whitespace-nowrap transition-colors ${
                         activeTab === tab
                           ? "border-blue-500 text-blue-600"
                           : "border-transparent text-gray-500 hover:text-gray-700"
@@ -250,7 +265,7 @@ const LandingPage: React.FC = () => {
                         ? "Basic Usage"
                         : tab === "validation"
                         ? "With Validation"
-                        : "Custom Navigation"}
+                        : "Custom Nav"}
                     </button>
                   )
                 )}
@@ -258,7 +273,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               {activeTab === "installation" && (
                 <CodeBlock
                   language="typescript"
@@ -335,7 +350,7 @@ const App = () => (
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <span className="text-2xl">🧭</span>
             <span className="text-2xl font-bold">trail-js</span>
